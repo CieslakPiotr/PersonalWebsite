@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 const TITLE = "Piotr Cieslak — Software Engineer";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     { path: "/", name: "home", component: () => import("./views/HomeView.vue"), meta: { label: "Home" } },
     { path: "/about", name: "about", component: () => import("./views/AboutView.vue"), meta: { label: "About" } },
@@ -15,6 +15,8 @@ const router = createRouter({
   ],
   scrollBehavior: () => ({ top: 0 }),
 });
+
+if (location.hash.startsWith("#/")) history.replaceState(null, "", location.hash.slice(1));
 
 router.afterEach((to) => {
   document.title = to.name === "home" ? TITLE : `${to.meta.label} · ${TITLE}`;
