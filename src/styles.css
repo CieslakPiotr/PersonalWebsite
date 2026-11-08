@@ -64,7 +64,7 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0; letter-sp
 .dot { width: 9px; height: 9px; border-radius: 50%; background: rgb(var(--v-theme-mint)); margin-right: 8px; animation: pulse 1.8s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(var(--v-theme-mint)); } 70%, 100% { box-shadow: 0 0 0 8px transparent; } }
 .photo-col { display: flex; justify-content: flex-end; padding-left: 32px; }
-.photo { flex: none; width: min(290px, 72%); border: 3px solid var(--ink); box-shadow: var(--shadow); transform-origin: right center; transition: transform .35s ease, box-shadow .35s ease; }
+.photo { flex: none; width: min(360px, 100%); border: 3px solid var(--ink); box-shadow: var(--shadow); transform-origin: right center; transition: transform .35s ease, box-shadow .35s ease; }
 .photo:hover { transform: scale(1.05); box-shadow: 8px 8px 0 var(--ink); }
 
 .code { margin-top: 36px; font: 14px/1.7 var(--mono); overflow: hidden; }
